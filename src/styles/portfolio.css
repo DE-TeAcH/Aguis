@@ -1,0 +1,110 @@
+/* ===================================
+   PORTFOLIO
+   =================================== */
+
+@media only screen and (max-width: 1320px) {
+  .content .content__container .portfolio-text {
+    display: none;
+  }
+}
+
+.content .content__container .content__portfolio {
+  width: 100%;
+}
+
+.content .content__container .content__portfolio::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .content .content__container .content__portfolio {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+  }
+}
+
+.content .content__container .content__portfolio .projects__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  list-style: none;
+  padding-top: 5%;
+}
+
+@media only screen and (max-width: 1320px) {
+  .content .content__container .content__portfolio .projects__list {
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content .content__container .content__portfolio .projects__list {
+    padding-top: 0;
+    justify-content: space-between;
+    width: 300%;
+  }
+}
+
+.content .content__container .content__portfolio .projects__list .project__item {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .content .content__container .content__portfolio .projects__list .project__item {
+    width: 90%;
+    margin: auto;
+    scroll-snap-align: center;
+  }
+}
+
+.content .content__container .content__portfolio .projects__list .project__item .project__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1rem;
+  display: grid;
+  position: relative;
+  overflow: hidden;
+  counter-increment: section;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 4px;
+}
+
+.content .content__container .content__portfolio .projects__list .project__item .double__img {
+  grid-area: 1 / 1 / -1 / -1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content .content__container .content__portfolio .projects__list .project__item h3 {
+  font-weight: 400;
+  line-height: 1;
+}
+
+.content .content__container .content__portfolio .projects__list .project__item p {
+  color: var(--color-gray-text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .content__container .content__portfolio .projects__list .project__item p:before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-right: 0.75rem;
+}

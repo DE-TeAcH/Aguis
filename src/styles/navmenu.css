@@ -1,0 +1,96 @@
+/* ===================================
+   DROPDOWN NAV MENU
+   =================================== */
+.nav-dropdown-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navMenu {
+  position: absolute;
+  top: 150%; /* below the menu button */
+  right: 0;
+  width: 220px;
+  background: var(--color-card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 12px;
+  padding: 0.5rem;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  /* Hide transition: waits 1s before fading out */
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) 1s,
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) 1s,
+              visibility 0s linear 1.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Show dropdown on hover (desktop) or when data-nav="true" (mobile) */
+.nav-dropdown-container:hover .navMenu,
+body[data-nav="true"] .navMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  /* Show transition: appears immediately */
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+              visibility 0s linear 0s;
+}
+
+.navMenu__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu__item {
+  width: 100%;
+}
+
+.navMenu__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  color: var(--color-gray-text);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.navMenu__link:hover {
+  background: rgba(128, 128, 128, 0.08);
+  color: var(--color-fg);
+  padding-left: 1.5rem;
+}
+
+/* Highlight active section */
+.navMenu__item.active .navMenu__link {
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  font-weight: 500;
+}
+
+.navMenu__item.active .navMenu__link::before {
+  content: "•";
+  margin-right: 8px;
+  font-size: 1.2rem;
+  line-height: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .navMenu {
+    width: 200px;
+    top: 140%;
+  }
+}
+

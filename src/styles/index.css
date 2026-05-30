@@ -1,0 +1,126 @@
+/* ===================================
+   AGIUS - Creative Agency
+   Global Styles, Reset & Animations
+   =================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ---- CSS Variables ---- */
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #ff7e21;
+  --color-accent-light: #ff8d3b;
+  --color-gray: gray;
+  --color-gray-dark: #212121;
+  --color-gray-text: #c8c8c8;
+  --color-stroke: #404040;
+  --color-stroke-light: #b3b3b3;
+  --color-glass-bg: rgba(30, 30, 30, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-card-bg: rgba(30, 30, 30, 0.8);
+  --color-preloader-fill: #ffffff;
+  --color-marquee-dark-bg: #212121;
+  --color-marquee-dark-fg: #ffffff;
+  --color-marquee-light-bg: #ffffff;
+  --color-marquee-light-fg: #000000;
+  --color-spinner-text: #ffffff;
+  --color-nav-bar: #ffffff;
+  --font-family: "Poppins", sans-serif;
+}
+
+/* ---- Light Theme ---- */
+:root[data-theme="light"] {
+  --color-bg: #f0f6ff;
+  --color-fg: #1a1a2e;
+  --color-accent: #0ea5e9;
+  --color-accent-light: #38bdf8;
+  --color-gray: #64748b;
+  --color-gray-dark: #e2e8f0;
+  --color-gray-text: #475569;
+  --color-stroke: #cbd5e1;
+  --color-stroke-light: #94a3b8;
+  --color-glass-bg: rgba(255, 255, 255, 0.6);
+  --color-glass-border: rgba(14, 165, 233, 0.15);
+  --color-card-bg: rgba(255, 255, 255, 0.85);
+  --color-preloader-fill: #0ea5e9;
+  --color-marquee-dark-bg: #e2e8f0;
+  --color-marquee-dark-fg: #1a1a2e;
+  --color-marquee-light-bg: #0ea5e9;
+  --color-marquee-light-fg: #ffffff;
+  --color-spinner-text: #1a1a2e;
+  --color-nav-bar: #1a1a2e;
+}
+
+/* ---- Reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Animations ---- */
+@keyframes nav-marqee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqee {
+  to {
+    transform: translate3d(-52%, 0, 0);
+  }
+}
+
+.rotateZ {
+  animation: rotateZ 5s linear infinite;
+}
+
+@keyframes rotateZ {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- Body & Layout ---- */
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+@media screen and (min-width: 1000px) and (max-height: 600px) {
+  body {
+    min-height: 900px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: flex-start;
+  width: 90%;
+  height: 85%;
+  margin: auto;
+}
