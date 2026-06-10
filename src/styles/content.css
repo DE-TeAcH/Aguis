@@ -536,39 +536,49 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .services-interactive-container {
+    min-height: 350px;
+    height: 55vh;
+  }
+
   .service-cloud {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    animation: none !important;
   }
 
   .cloud-1 {
-    top: 10%;
+    top: 8%;
     left: 5%;
   }
 
   .cloud-2 {
-    top: 15%;
+    top: 8%;
     right: 5%;
+    left: auto;
   }
 
   .cloud-3 {
-    top: 35%;
+    top: 30%;
     left: 5%;
   }
 
   .cloud-4 {
-    top: 40%;
+    top: 30%;
     right: 5%;
+    left: auto;
   }
 
   .cloud-5 {
-    top: 60%;
+    top: 52%;
     left: 5%;
   }
 
   .cloud-6 {
-    top: 65%;
+    top: 52%;
     right: 5%;
+    left: auto;
   }
 
   .service-active-card {
@@ -576,6 +586,25 @@
   }
 
   .service-active-card__content h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+
+  .service-active-card__content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .services__active-view {
+    padding-top: 1rem;
+  }
+
+  .service-sidebar {
+    gap: 0.5rem;
+  }
+
+  .service-sidebar__item {
+    flex: 1 1 45%;
+    padding: 0.7rem;
+    font-size: 0.7rem;
   }
 }

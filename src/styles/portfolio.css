@@ -20,6 +20,8 @@
 @media only screen and (max-width: 768px) {
   .portfolio-slider-container {
     margin-left: 0;
+    width: 100%;
+    min-height: 320px;
   }
 }
 

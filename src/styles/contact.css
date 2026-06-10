@@ -531,10 +531,59 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .contact-page {
+    height: auto;
+    min-height: 85%;
+    align-items: flex-start;
+    padding-top: 1rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .contact-page::-webkit-scrollbar {
+    display: none;
+  }
+  .contact-container {
+    flex-direction: column;
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 2rem;
+  }
   .contact-card {
     padding: 1.5rem;
   }
   .contact-card__header h2 {
     font-size: 1.3rem;
+  }
+  .contact-card--form {
+    overflow: visible;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact-page {
+    width: 95%;
+    padding-top: 0.5rem;
+  }
+  .contact-card {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+  .contact-card__header h2 {
+    font-size: 1.15rem;
+  }
+  .contact-card__header p {
+    font-size: 0.8rem;
+  }
+  .contact-info__block p {
+    font-size: 0.85rem;
+  }
+  .contact-social__link {
+    width: 38px;
+    height: 38px;
+  }
+  .contact-social__link svg {
+    width: 16px;
+    height: 16px;
   }
 }

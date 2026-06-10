@@ -182,8 +182,7 @@ main .banner-tag {
 
 @media only screen and (max-width: 480px) {
   .logo-spinner {
-    width: 80px;
-    height: 80px;
+    display: none;
   }
 }
 
@@ -232,11 +231,17 @@ main .banner-tag {
 
 @media only screen and (max-width: 480px) {
   .watch-video-circle {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
+    bottom: 2vh;
+    right: 0;
   }
   .watch-video-circle span {
-    font-size: 0.5rem;
+    display: none;
+  }
+  .watch-video-circle svg {
+    width: 16px;
+    height: 16px;
   }
 }
 

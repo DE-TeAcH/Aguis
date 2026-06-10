@@ -133,8 +133,8 @@ export function usePageAnimations(isPreloaderDone = true) {
   // Wheel listener
   useEffect(() => {
     const handleWheel = (e) => {
-      // Don't navigate when scrolling inside the portfolio slider
-      if (e.target.closest(".portfolio-slider")) return;
+      // Don't navigate when scrolling inside interactive containers
+      if (e.target.closest(".portfolio-slider") || e.target.closest(".contact-page")) return;
 
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         if (e.deltaY > 50) {
@@ -155,7 +155,7 @@ export function usePageAnimations(isPreloaderDone = true) {
     let touchStartedInSlider = false;
 
     const handleTouchStart = (e) => {
-      touchStartedInSlider = !!e.target.closest(".portfolio-slider");
+      touchStartedInSlider = !!(e.target.closest(".portfolio-slider") || e.target.closest(".contact-page"));
       touchStartY = e.changedTouches[0].screenY;
     };
 
