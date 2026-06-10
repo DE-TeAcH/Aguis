@@ -80,8 +80,7 @@ main .banner-tag {
   font-size: clamp(400px, 25vw, 25vw);
   line-height: 1;
   -webkit-text-stroke: 1px var(--color-stroke);
-  color: var(--color-fg);
-  opacity: 0.10;
+  color: transparent;
   z-index: -1;
 }
 
@@ -90,7 +89,8 @@ main .banner-tag {
     top: calc(50% - 25vh);
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.15;
+    color: var(--color-fg);
+    opacity: 0.07;
     -webkit-text-stroke: none;
   }
 }
@@ -129,14 +129,6 @@ main .banner-tag {
     font-size: 3rem;
     margin-left: 0;
     margin-top: 2rem;
-  }
-  .banner span {
-    background: var(--color-glass-bg);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    padding: 0.15em 0.35em;
-    border-radius: 4px;
-    border: 1px solid var(--color-glass-border);
   }
 }
 
