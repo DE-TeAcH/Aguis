@@ -535,7 +535,7 @@
     height: auto;
     min-height: 85%;
     align-items: flex-start;
-    padding-top: 1rem;
+    padding-top: 8rem;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -566,7 +566,7 @@
   }
   .contact-page {
     width: 95%;
-    padding-top: 0.5rem;
+    padding-top: 6rem;
     height: 85%;
     overflow-y: auto;
   }
