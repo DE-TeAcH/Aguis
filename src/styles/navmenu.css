@@ -92,5 +92,21 @@ body[data-nav="true"] .navMenu {
     width: 200px;
     top: 140%;
   }
-}
 
+  /* On touch devices, disable hover-based menu — only use toggle button */
+  .nav-dropdown-container:hover .navMenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+  }
+
+  /* Only show menu when toggled via button */
+  body[data-nav="true"] .navMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) 0s,
+                visibility 0s linear 0s;
+  }
+}

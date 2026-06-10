@@ -89,19 +89,21 @@
   .content .bg-text {
     pointer-events: none;
     position: absolute;
-    top: calc(50% - 10vh);
+    top: calc(50% - 18vh);
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .content .bg-text span:before {
     opacity: 0.25;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .content .bg-text {
     font-size: clamp(300px, 20vw, 300px);
+    top: calc(50% - 15vh);
   }
 }
 
@@ -545,7 +547,6 @@
     padding: 0.6rem 1.2rem;
     font-size: 0.7rem;
     letter-spacing: 1px;
-    animation: none !important;
   }
 
   .cloud-1 {
