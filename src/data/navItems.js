@@ -88,7 +88,7 @@ const portfolioProjects = [
     website: "#",
   },
   {
-    title: "Agius Showreel",
+    title: "Agius Showeel",
     category: "Motion Design",
     gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
     description: "A cinematic showreel highlighting the agency's best creative work across branding, web design, and motion graphics. Crafted to leave a lasting impression.",
