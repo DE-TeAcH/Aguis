@@ -83,7 +83,7 @@ a {
 
 @keyframes marqee {
   to {
-    transform: translate3d(-52%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 

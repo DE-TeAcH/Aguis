@@ -133,6 +133,9 @@ export function usePageAnimations(isPreloaderDone = true) {
   // Wheel listener
   useEffect(() => {
     const handleWheel = (e) => {
+      // Don't navigate when scrolling inside the portfolio slider
+      if (e.target.closest(".portfolio-slider")) return;
+
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         if (e.deltaY > 50) {
           navigateTo(1);
@@ -149,12 +152,17 @@ export function usePageAnimations(isPreloaderDone = true) {
   // Touch listener
   useEffect(() => {
     let touchStartY = 0;
+    let touchStartedInSlider = false;
 
     const handleTouchStart = (e) => {
+      touchStartedInSlider = !!e.target.closest(".portfolio-slider");
       touchStartY = e.changedTouches[0].screenY;
     };
 
     const handleTouchEnd = (e) => {
+      // Don't navigate when swiping inside the portfolio slider
+      if (touchStartedInSlider) return;
+
       const touchEndY = e.changedTouches[0].screenY;
       if (touchStartY - touchEndY > 50) {
         navigateTo(1);

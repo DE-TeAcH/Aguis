@@ -108,13 +108,13 @@ export default function App() {
           </defs>
           <text fill="currentColor" fontSize="14" fontFamily="Poppins, sans-serif" letterSpacing="6">
             <textPath href="#circlePath" startOffset="0%">
-              AGUIS TEAM • AGUIS TEAM • AGUIS TEAM •&nbsp;
+              AGIUS TEAM • AGIUS TEAM • AGIUS TEAM •&nbsp;
             </textPath>
           </text>
         </svg>
         <img
-          src={theme === "light" ? "/images/aguis-logo_vL.png" : "/images/aguis-logo_vD.png"}
-          alt="Aguis Team logo"
+          src={theme === "light" ? "/images/agius-logo_vL.png" : "/images/agius-logo_vD.png"}
+          alt="Agius Team logo"
           className="logo-spinner__logo"
         />
       </div>

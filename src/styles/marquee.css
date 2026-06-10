@@ -35,12 +35,13 @@
 }
 
 .marqee ul {
-  width: 100%;
+  width: max-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 2rem;
+  padding-right: 2rem;
   list-style: none;
   animation: marqee 15s linear infinite;
 }

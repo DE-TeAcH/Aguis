@@ -12,7 +12,7 @@ export default function AboutContent() {
           <span data-letter="A">A</span>
         </div>
         <div className="content__about">
-          <h3 className="fade-in">We are the Aguis team</h3>
+          <h3 className="fade-in">We are the Agius team</h3>
           <p className="fade-in">
             Agius is a leading design, branding, &amp; software development agency based <br></br>
             online. We help clients bring their ideas to life, by design, branding, web & app <br></br>

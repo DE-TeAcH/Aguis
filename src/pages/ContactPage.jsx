@@ -78,7 +78,7 @@ export default function ContactPage() {
           <div className="contact-info__block">
             <h3>Visit Us</h3>
             <p>
-              Aguis Creative Agency
+              Agius Creative Agency
               <br />
               Friedrichstraße 123
               <br />
@@ -88,7 +88,7 @@ export default function ContactPage() {
 
           <div className="contact-info__block">
             <h3>Email Us</h3>
-            <p>hello@aguis.team</p>
+            <p>hello@agius.team</p>
           </div>
 
           <div className="contact-info__block">
